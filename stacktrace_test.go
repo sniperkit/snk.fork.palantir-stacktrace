@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 Palantir Technologies
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,7 +27,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/palantir/stacktrace"
+	"github.com/sniperkit/snk.fork.palantir-stacktrace"
 )
 
 func TestMessage(t *testing.T) {
@@ -36,15 +41,15 @@ func TestMessage(t *testing.T) {
 
 	expected := strings.Join([]string{
 		"so closed",
-		" --- at github.com/palantir/stacktrace/functions_for_test.go:51 (doClosure.func1) ---",
+		" --- at github.com/sniperkit/snk.fork.palantir-stacktrace/functions_for_test.go:51 (doClosure.func1) ---",
 		"Caused by: pointedly",
-		" --- at github.com/palantir/stacktrace/functions_for_test.go:46 (ptrObj.doPtr) ---",
-		" --- at github.com/palantir/stacktrace/functions_for_test.go:42 (privateObj.doPrivate) ---",
-		" --- at github.com/palantir/stacktrace/functions_for_test.go:38 (privateObj.DoPublic) ---",
-		" --- at github.com/palantir/stacktrace/functions_for_test.go:34 (PublicObj.doPrivate) ---",
-		" --- at github.com/palantir/stacktrace/functions_for_test.go:30 (PublicObj.DoPublic) ---",
+		" --- at github.com/sniperkit/snk.fork.palantir-stacktrace/functions_for_test.go:46 (ptrObj.doPtr) ---",
+		" --- at github.com/sniperkit/snk.fork.palantir-stacktrace/functions_for_test.go:42 (privateObj.doPrivate) ---",
+		" --- at github.com/sniperkit/snk.fork.palantir-stacktrace/functions_for_test.go:38 (privateObj.DoPublic) ---",
+		" --- at github.com/sniperkit/snk.fork.palantir-stacktrace/functions_for_test.go:34 (PublicObj.doPrivate) ---",
+		" --- at github.com/sniperkit/snk.fork.palantir-stacktrace/functions_for_test.go:30 (PublicObj.DoPublic) ---",
 		"Caused by: failed to start doing",
-		" --- at github.com/palantir/stacktrace/functions_for_test.go:26 (startDoing) ---",
+		" --- at github.com/sniperkit/snk.fork.palantir-stacktrace/functions_for_test.go:26 (startDoing) ---",
 	}, "\n")
 	stacktrace.DefaultFormat = stacktrace.FormatFull
 	assert.Equal(t, expected, err.Error())

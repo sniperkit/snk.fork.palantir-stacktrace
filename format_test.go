@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2016 Palantir Technologies
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,7 +27,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/palantir/stacktrace"
+	"github.com/sniperkit/snk.fork.palantir-stacktrace"
 )
 
 func TestFormat(t *testing.T) {
@@ -40,19 +45,19 @@ func TestFormat(t *testing.T) {
 			format:             stacktrace.FormatFull,
 			specifier:          "%v",
 			expectedPlain:      "plain",
-			expectedStacktrace: "decorated\n --- at github.com/palantir/stacktrace/format_test.go:## (TestFormat) ---\nCaused by: plain",
+			expectedStacktrace: "decorated\n --- at github.com/sniperkit/snk.fork.palantir-stacktrace/format_test.go:## (TestFormat) ---\nCaused by: plain",
 		},
 		{
 			format:             stacktrace.FormatFull,
 			specifier:          "%q",
 			expectedPlain:      "\"plain\"",
-			expectedStacktrace: "\"decorated\\n --- at github.com/palantir/stacktrace/format_test.go:## (TestFormat) ---\\nCaused by: plain\"",
+			expectedStacktrace: "\"decorated\\n --- at github.com/sniperkit/snk.fork.palantir-stacktrace/format_test.go:## (TestFormat) ---\\nCaused by: plain\"",
 		},
 		{
 			format:             stacktrace.FormatFull,
 			specifier:          "%105s",
 			expectedPlain:      "                                                                                                    plain",
-			expectedStacktrace: "     decorated\n --- at github.com/palantir/stacktrace/format_test.go:## (TestFormat) ---\nCaused by: plain",
+			expectedStacktrace: "     decorated\n --- at github.com/sniperkit/snk.fork.palantir-stacktrace/format_test.go:## (TestFormat) ---\nCaused by: plain",
 		},
 		{
 			format:             stacktrace.FormatFull,
@@ -82,7 +87,7 @@ func TestFormat(t *testing.T) {
 			format:             stacktrace.FormatBrief,
 			specifier:          "%+s",
 			expectedPlain:      "plain",
-			expectedStacktrace: "decorated\n --- at github.com/palantir/stacktrace/format_test.go:## (TestFormat) ---\nCaused by: plain",
+			expectedStacktrace: "decorated\n --- at github.com/sniperkit/snk.fork.palantir-stacktrace/format_test.go:## (TestFormat) ---\nCaused by: plain",
 		},
 	} {
 		stacktrace.DefaultFormat = test.format

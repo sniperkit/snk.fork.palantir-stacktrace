@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package cleanpath_test
 
 import (
@@ -8,7 +13,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/palantir/stacktrace/cleanpath"
+	"github.com/sniperkit/snk.fork.palantir-stacktrace/cleanpath"
 )
 
 func TestRemoveGoPath(t *testing.T) {

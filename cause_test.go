@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 package stacktrace_test
 
 import (
@@ -6,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/palantir/stacktrace"
+	"github.com/sniperkit/snk.fork.palantir-stacktrace"
 )
 
 type customError string
